@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.andrestubbe</groupId>
+    <artifactId>FastVoice</artifactId>
+    <version>0.1.0</version>
+    <packaging>jar</packaging>
+
+    <name>FastVoice</name>
+    <description>Ultra-Fast Zero-Shot AI Voice Cloning &amp; Voice Conversion Engine for Java</description>
+    <url>https://github.com/andrestubbe/FastVoice</url>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Andre Stubbe</name>
+            <organization>FastJava</organization>
+            <organizationUrl>https://github.com/andrestubbe</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/andrestubbe/FastVoice.git</connection>
+        <developerConnection>scm:git:ssh://github.com:andrestubbe/FastVoice.git</developerConnection>
+        <url>https://github.com/andrestubbe/FastVoice/tree/main</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- FastCore - Native Platform Infrastructure -->
+        <dependency>
+            <groupId>com.github.andrestubbe</groupId>
+            <artifactId>FastCore</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+
+        <!-- FastAudioProcess - Multi-Track Mixing, Denoise & DSP -->
+        <dependency>
+            <groupId>com.github.andrestubbe</groupId>
+            <artifactId>FastAudioProcess</artifactId>
+            <version>0.1.6</version>
+        </dependency>
+
+        <!-- FastSIMD - Hardware Vector Acceleration -->
+        <dependency>
+            <groupId>com.github.andrestubbe</groupId>
+            <artifactId>FastSIMD</artifactId>
+            <version>0.1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

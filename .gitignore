@@ -1,0 +1,12 @@
+# FastJava Standard .gitignore
+target/
+*.class
+.idea/
+*.iml
+.vscode/
+*.log
+*.tmp
+build/
+native/*.obj
+native/*.lib
+native/*.exp
