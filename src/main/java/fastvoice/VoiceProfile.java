@@ -18,9 +18,9 @@ public record VoiceProfile(
         int sampleRate
 ) {
     /**
-     * Exports this voice profile directly to the shared Speak+ / Voice+ directory structure.
+     * Exports this voice profile directly to the specified directory structure.
      *
-     * @param targetDirectory directory where clone subfolder will be created (e.g. %APPDATA%/SpeakPlus/voices/clones)
+     * @param targetDirectory directory where clone subfolder will be created (e.g. voices/clones)
      * @return Path to created profile directory
      */
     public Path exportToDirectory(Path targetDirectory) throws Exception {
