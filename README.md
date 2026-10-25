@@ -187,7 +187,7 @@ Add JitPack to your `<repositories>` and include the dependency in your `pom.xml
     <dependency>
         <groupId>com.github.andrestubbe</groupId>
         <artifactId>FastAudioProcess</artifactId>
-        <version>0.1.6</version>
+        <version>0.1.7</version>
     </dependency>
 
     <!-- FastCore (Unified Native Platform Loader) -->
@@ -208,7 +208,7 @@ repositories {
 
 dependencies {
     implementation 'com.github.andrestubbe:FastVoice:0.1.0'
-    implementation 'com.github.andrestubbe:FastAudioProcess:0.1.6'
+    implementation 'com.github.andrestubbe:FastAudioProcess:0.1.7'
     implementation 'com.github.andrestubbe:FastCore:0.1.0'
 }
 ```
