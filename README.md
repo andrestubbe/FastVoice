@@ -55,8 +55,8 @@ public class Demo {
   - [Option 3: Direct Download (Pre-built JAR)](#option-3-direct-download-pre-built-jar)
 - [Documentation](#documentation)
 - [Platform Support](#platform-support)
-- [Related Projects](#related-projects)
 - [License](#license)
+- [Related Projects](#related-projects)
 
 ---
 
@@ -241,20 +241,24 @@ Download the pre-compiled standalone JAR directly from GitHub Releases:
 
 ---
 
-## Related Projects
+## License
 
-- **[FastTTS](https://github.com/andrestubbe/FastTTS)** — Unified, zero-bloat TTS backend orchestration for Java.
-- **[FastSTT](https://github.com/andrestubbe/FastSTT)** — Ultra-fast offline Speech-to-Text inference engine.
-- **[FastVAD](https://github.com/andrestubbe/FastVAD)** — Voice Activity Detection with Silero VAD.
-- **[FastAudioCapture](https://github.com/andrestubbe/FastAudioCapture)** — Low-latency native WASAPI microphone audio capture.
-- **[FastAudioProcess](https://github.com/andrestubbe/FastAudioProcess)** — Multi-track mixing, denoise, and real-time DSP.
-- **[FastAudioPlayer](https://github.com/andrestubbe/FastAudioPlayer)** — High-performance native audio playback.
-- **[FastCore](https://github.com/andrestubbe/FastCore)** — Native platform loader and low-level runtime infrastructure.
-- **[FastSIMD](https://github.com/andrestubbe/FastSIMD)** — Vector hardware acceleration for high-throughput math and DSP.
+MIT License — See [LICENSE](LICENSE) file for details.
 
 ---
 
-## License
+## Related Projects
 
-This project is licensed under the [MIT License](LICENSE).  
-Part of the **FastJava Ecosystem**.
+- [FastTTS](https://github.com/andrestubbe/FastTTS) — Unified, zero-bloat text-to-speech backend orchestration
+- [FastSTT](https://github.com/andrestubbe/FastSTT) — High-throughput local speech-to-text recognition
+- [FastVAD](https://github.com/andrestubbe/FastVAD) — Ultra-fast real-time Voice Activity Detection (Silero-ONNX & WebRTC)
+- [FastAudioCapture](https://github.com/andrestubbe/FastAudioCapture) — Zero-copy WASAPI audio loopback & microphone capture
+- [FastAudioProcess](https://github.com/andrestubbe/FastAudioProcess) — Zero-allocation audio DSP, resamplers, and timeline mixing
+- [FastAudioPlayer](https://github.com/andrestubbe/FastAudioPlayer) — Ultra low-latency WASAPI and DirectSound audio playback engine
+- [FastCore](https://github.com/andrestubbe/FastCore) — Native library loader, FFM gateway, and platform abstraction
+- [FastSIMD](https://github.com/andrestubbe/FastSIMD) — Vector hardware acceleration for high-throughput math and DSP
+
+---
+
+Part of the FastJava Ecosystem — Making the JVM faster. Small package. Maximum speed. Zero bloat. 🚀📋
+
