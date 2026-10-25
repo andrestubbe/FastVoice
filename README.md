@@ -10,7 +10,7 @@
 
 **⚡ Hardware-accelerated, zero-shot AI voice cloning and speech-to-speech conversion for the FastJava ecosystem.**
 
-**FastVoice** enables high-fidelity voice cloning in seconds without training heavy neural models. It extracts compact mathematical speaker embeddings (`~2 KB`) from short reference audio samples (3–10s) and performs instant multi-engine voice cloning and conversion for **Voice+** and **Speak+**.
+**FastVoice** enables high-fidelity voice cloning in seconds without training heavy neural models. It extracts compact mathematical speaker embeddings (`~2 KB`) from short reference audio samples (3–10s) and performs instant multi-engine voice cloning and conversion for Java applications.
 
 ---
 
@@ -25,11 +25,11 @@ public class Demo {
     public static void main(String[] args) throws Exception {
         // 1. Create a cloned voice profile from a 5s audio sample
         byte[] referenceAudioWav = java.nio.file.Files.readAllBytes(Path.of("sample.wav"));
-        VoiceProfile profile = FastVoice.createProfile("Andre", "f5tts", referenceAudioWav);
+        VoiceProfile profile = FastVoice.createProfile("SpeakerName", "f5tts", referenceAudioWav);
 
-        // 2. Export profile directly to the shared Speak+ voices catalog
-        Path sharedVoicesDir = Path.of(System.getenv("APPDATA"), "SpeakPlus", "voices", "clones");
-        profile.exportToDirectory(sharedVoicesDir);
+        // 2. Export profile to a target directory
+        Path exportDir = Path.of("voices", "clones");
+        profile.exportToDirectory(exportDir);
         
         System.out.println("Voice cloned and exported: " + profile.name());
     }
@@ -55,15 +55,14 @@ public class Demo {
                                │ Lightweight Profile (~2 KB)
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                 Shared Voice Profile Storage                │
-│             (%APPDATA%/SpeakPlus/voices/clones)             │
+│                     Voice Profile Storage                   │
 │        • voice.json  • embedding.bin  • reference.wav       │
 └──────────────────────────────┬──────────────────────────────┘
-                               │ Instant Auto-Discovery
+                               │ Programmatic Java API
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                           Speak+                            │
-│     (Immediate Synthesis, CLI -v, and Multi-Track SpeakML)  │
+│                    Downstream Application                   │
+│         (Real-time Synthesis & Audio Generation)            │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -74,7 +73,7 @@ public class Demo {
 - ⚡ **Zero-Shot One-Click Cloning**: No lengthy model fine-tuning or GPU hours required. Clones timbre from 3–10s of audio in 1–2 seconds.
 - 🪶 **Ultra-Compact Profiles**: Stores embeddings as tiny binary vectors (`~2 KB`), allowing thousands of voices without disk bloat.
 - 🔄 **Speech-to-Speech Conversion**: Transform spoken recordings into any target profile's voice.
-- 🔌 **Seamless Ecosystem Interop**: Built specifically as the engine behind **Voice+** with automatic discovery inside **Speak+**.
+- 🔌 **Seamless Ecosystem Interop**: Clean, decoupled Java API designed for integration with FastJava audio and speech pipelines.
 
 ---
 
